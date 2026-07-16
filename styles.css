@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 112px;
 }
 
 body {
@@ -85,7 +86,8 @@ h3 {
   align-items: center;
   padding: 14px clamp(18px, 4vw, 56px);
   color: var(--white);
-  background: linear-gradient(180deg, rgba(18, 56, 38, 0.94), rgba(18, 56, 38, 0.18));
+  background: var(--green-900);
+  box-shadow: 0 14px 34px rgba(12, 45, 32, 0.24);
 }
 
 .brand {
@@ -260,6 +262,7 @@ h3 {
   position: relative;
   z-index: 1;
   width: min(1020px, calc(100% - 36px));
+  max-width: calc(100vw - 36px);
   padding: clamp(150px, 22vh, 220px) 0 92px;
   margin-left: clamp(18px, 7vw, 92px);
 }
@@ -486,6 +489,72 @@ dd {
 .program-table [role="cell"]:last-child {
   color: var(--white);
   font-weight: 800;
+}
+
+.schedule-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 12px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.schedule-table thead th {
+  color: var(--green-950);
+  background: var(--yellow-500);
+  font-weight: 800;
+}
+
+.schedule-table tbody th {
+  width: 80px;
+  color: var(--yellow-500);
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.schedule-table td {
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.45;
+}
+
+.schedule-table small {
+  color: rgba(255, 255, 255, 0.64);
+  font-weight: 700;
+}
+
+.schedule-table .break-cell {
+  color: var(--white);
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table .empty-cell {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.schedule-note {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 700;
+}
+
+.schedule-note span {
+  display: block;
 }
 
 .split {
@@ -761,6 +830,16 @@ address a {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.last-modified {
+  width: 100%;
+  font-size: 0.86rem;
+  text-align: right;
+}
+
+.last-modified span:first-child {
+  font-weight: 800;
+}
+
 @media (max-width: 1060px) {
   .site-header {
     grid-template-columns: auto auto;
@@ -781,6 +860,14 @@ address a {
 @media (max-width: 940px) {
   .hero-content {
     margin-inline: auto;
+  }
+
+  /* On small screens, position the menu toggle at the bottom of its grid container with spacing for adjacent elements. */
+  .site-header .menu-toggle {
+    justify-self: end;
+    align-self: end;
+    padding-top: 12px;
+    margin-bottom: 48px;
   }
 
   .hero-facts,
@@ -810,38 +897,66 @@ address a {
 }
 
 @media (max-width: 620px) {
+  html {
+    scroll-padding-top: 150px;
+  }
+
   .site-header {
-    grid-template-columns: auto 1fr auto;
-    gap: 12px;
-    padding: 10px 14px;
-    background: rgba(18, 56, 38, 0.96);
+    background-color: var(--green-900);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 4px;
+    align-items: center;
+    padding: 7px clamp(12px, 3vw, 18px);
     box-shadow: 0 14px 34px rgba(12, 45, 32, 0.22);
   }
 
   .image-brand {
-    width: min(190px, 62vw);
+    width: min(170px, 68vw);
   }
 
   .censipam-brand {
-    justify-self: start;
-  }
-
-  .censipam-brand img {
-    height: 48px;
+    order: -1;
   }
 
   .menu-toggle {
-    position: relative;
-    display: inline-flex;
-    justify-self: end;
+    margin-left: auto;
+  }
+
+  /* On small screens the header has only 3 items per row. Push the link row below them so it fills the available width instead of being cramped next to the brand. */
+  #primary-navigation {
+    order: 8;
+    width: 100%;
+    display: flex;
+  }
+
+  .language-switch,
+  [data-language] {
+    margin-left: 0;
+  }
+
+  .image-brand,
+  .nav-links,
+  .censipam-brand {
+    order: auto;
+  }
+
+  /* The brand image takes the left portion of a small header. Push it toward the right edge so the nav links sit closer to center on the line above the menu bar. */
+  .image-brand {
+    margin-right: clamp(8px, 4vw, 28px);
   }
 
   .nav-links {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 14px;
-    left: 14px;
-    display: grid;
+    justify-content: flex-start;
+  }
+
+  /* If no brand image is present (only UF + CENSIPAM), distribute spacing evenly so the language switch can sit on the right edge of its row. */
+  .image-brand:empty,
+  div.image-brand:not(:first-child) {
+    order: -1;
+  }
+
+  .nav-links {
     max-height: calc(100svh - 92px);
     padding: 18px;
     overflow: auto;

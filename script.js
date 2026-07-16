@@ -10,6 +10,7 @@
       "nav.summerSchool": "Summer School",
       "nav.program": "Program",
       "nav.schedule": "Schedule",
+      "nav.results": "Results",
       "nav.registration": "Registration",
       "nav.photos": "Photos",
       "nav.contact": "Contact",
@@ -28,11 +29,11 @@
       "hero.languagesLabel": "Languages",
       "hero.languagesValue": "Portuguese and English",
       "intro.title": "A school to consolidate scientific and technological capabilities.",
-      "intro.copy": "GEOMRIT 2027 was conceived as a strategic initiative to consolidate and expand the scientific capabilities of LIGEM.Redes, CENSIPAM and other technical and scientific institutions linked to the Ministry of Defense.",
+      "intro.copy": "CENSIPAM integrates information and produces knowledge to support coordination, planning and government action in the Legal Amazon and the Blue Amazon. In this context, LIGEM.Redes was created as an applied research laboratory dedicated to geointelligence, network modeling of transnational illicit activities and strategic, operational and tactical decision support.",
       "summer.eyebrow": "Summer School",
       "summer.title": "Conceptual Framework",
       "summer.cardTitle": "1st Summer School in Geointelligence and Network Modeling of Transnational Illicit Activities",
-      "summer.copy": "The program combines intensive teaching activities with opportunities for exchange and scientific collaboration through undergraduate and graduate short courses, advanced scientific seminars, poster presentations and interactions with leading national and international researchers.",
+      "summer.copy": "A Summer School brings together educational and scientific activities during the vacation period, creating opportunities for learning, academic enrichment and professional development. GEOMRIT 2027 will be a flexible and collaborative environment to consolidate knowledge, advance ongoing research, explore new areas of interest and strengthen academic and professional networks.",
       "summer.metaLabel": "Summer school details",
       "summer.dateLabel": "Schedule",
       "summer.dateValue": "Second half of January or February 2027",
@@ -43,17 +44,17 @@
       "objectives.eyebrow": "Objectives",
       "objectives.title": "Advanced training, scientific collaboration and applied research.",
       "objectives.generalTitle": "General objective",
-      "objectives.generalCopy": "Strengthen the scientific and technological capabilities of LIGEM.Redes, CENSIPAM and institutions linked to the Ministry of Defense, encouraging research in geointelligence, remote sensing, modeling, optimization, econometrics, artificial intelligence, high-performance computing, transportation, mobility and impact evaluation.",
+      "objectives.generalCopy": "Strengthen the scientific and technological capabilities of LIGEM.Redes, CENSIPAM and other technical and scientific institutions linked to the Ministry of Defense through advanced training, scientific collaboration and interdisciplinary research in geointelligence, remote sensing, spatial behavior modeling and optimization, econometrics, artificial intelligence, high-performance computing, transportation and mobility, and impact evaluation, especially when applied to network modeling of transnational illicit activities and evaluation of their impacts on the Sustainable Development Goals (SDGs).",
       "objectives.specificTitle": "Specific objectives",
-      "objectives.specific1": "Promote advanced training in geointelligence and network modeling of transnational illicit activities.",
-      "objectives.specific2": "Encourage multi- and interdisciplinary scientific exchange.",
-      "objectives.specific3": "Strengthen cooperation among LIGEM.Redes, CENSIPAM, universities and partner institutions.",
-      "objectives.specific4": "Support new collaborations, scientific networks and research agendas aligned with LIGEM.Redes' mission.",
+      "objectives.specific1": "Promote advanced training and capacity building through specialized teaching activities in geointelligence and network modeling of transnational illicit activities.",
+      "objectives.specific2": "Encourage multi- and interdisciplinary scientific exchange among students, researchers and experts of recognized national and international excellence.",
+      "objectives.specific3": "Strengthen scientific cooperation among LIGEM.Redes, CENSIPAM, universities and other technical and scientific institutions linked to the Ministry of Defense.",
+      "objectives.specific4": "Support new research collaborations, scientific networks and multi- and interdisciplinary research agendas aligned with LIGEM.Redes' mission.",
       "program.eyebrow": "Program",
       "program.title": "Proposed structure",
       "program.shortCoursesLabel": "Short courses",
       "program.shortCoursesTitle": "Undergraduate and graduate level",
-      "program.shortCoursesCopy": "Specialized activities in geointelligence, network modeling, computing, quantitative methods and related topics.",
+      "program.shortCoursesCopy": "Intensive teaching activities for undergraduate and graduate audiences, including MCG and MCPG, focused on geointelligence, network modeling, quantitative methods and related topics.",
       "program.classesLabel": "Groups",
       "program.classesValue": "25 to 30 participants",
       "program.sessionsLabel": "Sessions",
@@ -62,7 +63,7 @@
       "program.durationValue": "Morning and afternoon",
       "program.seminarsLabel": "Seminars",
       "program.seminarsTitle": "National and international",
-      "program.seminarsCopy": "Advanced scientific talks with invited researchers, promoting dialogue among academia, government and the defense sector.",
+      "program.seminarsCopy": "Advanced scientific seminars with invited researchers, promoting dialogue among academia, government, the defense sector and leading national and international institutions.",
       "program.audienceLabel": "Audience",
       "program.audienceValue": "60 to 80 participants",
       "program.languagesLabel": "Languages",
@@ -71,10 +72,10 @@
       "program.focusValue": "Frontier research",
       "program.postersLabel": "Poster sessions",
       "program.postersTitle": "Research presentations",
-      "program.postersCopy": "A space for students and researchers to share work, receive feedback and expand scientific collaboration networks.",
+      "program.postersCopy": "A space for students to present work, receive feedback, strengthen professional networks and encourage new scientific collaborations.",
       "program.visitLabel": "Technical visit",
       "program.visitTitle": "Applied integration",
-      "program.visitCopy": "An activity designed to connect scientific concepts, institutional infrastructure and operational applications.",
+      "program.visitCopy": "An activity designed to connect scientific concepts, institutional infrastructure, operational applications and integration among academia, government and the defense sector.",
       "schedule.eyebrow": "Proposed schedule",
       "schedule.title": "Week agenda",
       "schedule.tableLabel": "Proposed GEOMRIT 2027 schedule",
@@ -91,9 +92,11 @@
       "schedule.thursdayActivities": "Graduate short course #2, sessions 1 to 4",
       "schedule.friday": "Friday",
       "schedule.fridayActivities": "Poster session, graduate short course #2 and closing session",
+      "schedule.noteMcg": "MCG = Undergraduate short course",
+      "schedule.noteMcpg": "MCPG = Graduate short course",
       "audience.eyebrow": "Target audience",
       "audience.title": "Who GEOMRIT 2027 is for",
-      "audience.copy": "The Summer School is aimed at faculty, researchers, undergraduate and graduate students, public-sector managers and analysts, civilian and military public servants, and others interested in areas connected to the theme.",
+      "audience.copy": "The Summer School is aimed at faculty, researchers, undergraduate and graduate students, public-sector managers and analysts, civilian and military public servants and others interested in geointelligence, behavioral modeling, geography, statistics, econometrics, operations research, data science, transportation and logistics, high-performance computing, remote sensing, artificial intelligence, quantitative criminology, public security, sustainable development, national defense and related areas.",
       "audience.areasTitle": "Areas of interest",
       "audience.area1": "Geointelligence and remote sensing.",
       "audience.area2": "Behavioral modeling, statistics, econometrics and operations research.",
@@ -102,16 +105,29 @@
       "team.eyebrow": "Team",
       "team.title": "Human resources",
       "team.joseInstitution": "Federal University of Ceara / LIGEM.Redes / CENSIPAM",
-      "team.generalDirector": "Summer School Director-General",
+      "team.generalDirector": "20 hours - Summer School Director-General",
       "team.jeremiasInstitution": "Federal University of Amazonas / LIGEM.Redes / CENSIPAM",
-      "team.scientificLead": "Head of the Scientific Committee",
+      "team.scientificLead": "8 hours - Head of the Scientific Committee",
       "team.marceloInstitution": "Aeronautics Institute of Technology",
-      "team.scientificCommittee": "Scientific Committee",
+      "team.scientificCommittee": "8 hours - Scientific Committee",
       "team.carlosInstitution": "Superior Defense School / Air Force University / LIGEM.Redes / CENSIPAM",
-      "team.organizingLead": "Head of the Organizing Committee",
-      "team.organizingCommittee": "Organizing Committee",
+      "team.organizingLead": "20 hours - Head of the Organizing Committee",
+      "team.organizingCommittee": "20 hours - Organizing Committee",
+      "team.cristianoRole": "Organizing Committee",
       "team.nicholasInstitution": "University of Alabama (USA)",
-      "team.shortCourseInstructor": "Short course instructor",
+      "team.kevinInstitution": "University of Alabama (USA)",
+      "team.shortCourseInstructor": "9 hours - Short course instructor",
+      "team.speaker": "4 hours - Speaker",
+      "results.eyebrow": "Expected results",
+      "results.title": "Scientific visibility, intensive training and new collaborations.",
+      "results.copy": "GEOMRIT 2027 is expected to increase LIGEM.Redes' visibility and strengthen its scientific network through collaboration with leading national and international researchers and institutions. The Summer School will promote scientific exchange, identify and encourage new research talent, provide intensive academic training beyond the regular academic calendar, encourage dialogue between civilian and military communities and stimulate new collaborations and multi- and interdisciplinary research agendas.",
+      "results.metaLabel": "Expected results summary",
+      "results.networkLabel": "Scientific network",
+      "results.networkValue": "Expansion of national and international collaborations",
+      "results.trainingLabel": "Training",
+      "results.trainingValue": "Deeper knowledge in frontier research topics",
+      "results.capacityLabel": "Capabilities",
+      "results.capacityValue": "Scientific and technological institutional strengthening",
       "registration.eyebrow": "Registration",
       "registration.title": "Registration and participation",
       "registration.copy": "The call for applications, registration form and definitive dates will be announced by the GEOMRIT 2027 coordination team. Selection will consider thematic alignment, academic or professional profile, and availability of places per activity.",
@@ -156,7 +172,8 @@
       "contact.schoolName": "1st Summer School in Geointelligence and Network Modeling of Transnational Illicit Activities",
       "contact.sponsorsTitle": "Confirmed and potential sponsors",
       "contact.sponsorsCopy": "The Summer School will be funded in part with resources approved under the LIGEM.Redes project, supported by FINEP. Support is also being discussed with CNPq, FAPDF, the Brazilian Space Agency, UNODC, the Ministry of Justice and Public Security, the Ministry of Defense and the Embassy of the United States.",
-      "footer.copy": "GEOMRIT 2027 - LIGEM.Redes Summer School."
+      "footer.copy": "GEOMRIT 2027 - LIGEM.Redes Summer School.",
+      "footer.updatedLabel": "Last modified:"
     }
   };
 
@@ -167,6 +184,7 @@
   const siteHeader = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
   const primaryNavigation = document.querySelector("#primary-navigation");
+  const lastModifiedDate = document.querySelector("#last-modified-date");
   const metaDescription = document.querySelector('meta[name="description"]');
   const pageTitleKey = document.body ? document.body.getAttribute("data-i18n-title") : "";
   const pageDescriptionKey = document.body ? document.body.getAttribute("data-i18n-description") : "";
@@ -203,6 +221,56 @@
     } catch (error) {
       // Ignore storage restrictions; the language switch still works for the current page view.
     }
+  }
+
+  async function getFileLastModified(filePath) {
+    try {
+      const response = await fetch(filePath, {
+        method: "HEAD",
+        cache: "no-store"
+      });
+      const lastModified = response.headers.get("last-modified");
+
+      if (!lastModified) {
+        return null;
+      }
+
+      const date = new Date(lastModified);
+      return Number.isNaN(date.getTime()) ? null : date;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  async function setLastModified(language) {
+    if (!lastModifiedDate) {
+      return;
+    }
+
+    const fileDates = await Promise.all([
+      Promise.resolve(new Date(document.lastModified)),
+      getFileLastModified("index.html"),
+      getFileLastModified("styles.css"),
+      getFileLastModified("script.js")
+    ]);
+    const modified = fileDates
+      .filter(function (date) {
+        return date && !Number.isNaN(date.getTime());
+      })
+      .sort(function (a, b) {
+        return b.getTime() - a.getTime();
+      })[0];
+    const locale = language === "en" ? "en-US" : "pt-BR";
+
+    if (!modified) {
+      lastModifiedDate.textContent = document.lastModified;
+      return;
+    }
+
+    lastModifiedDate.textContent = new Intl.DateTimeFormat(locale, {
+      dateStyle: "short",
+      timeStyle: "short"
+    }).format(modified);
   }
 
   function getMenuLabel(isOpen) {
@@ -270,6 +338,7 @@
     });
 
     setMenuOpen(siteHeader ? siteHeader.classList.contains("is-menu-open") : false);
+    setLastModified(currentLanguage);
 
     saveLanguage(language);
   }
