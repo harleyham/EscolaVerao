@@ -1,6 +1,10 @@
 (function () {
   const storageKey = "geomrit-language";
   const translations = {
+    pt: {
+      "nav.openMenu": "Abrir menu",
+      "nav.closeMenu": "Fechar menu"
+    },
     en: {
       "meta.title": "GEOMRIT 2027 | LIGEM.Redes Summer School",
       "meta.description": "GEOMRIT 2027, the 1st Summer School in Geointelligence and Network Modeling of Transnational Illicit Activities.",
@@ -142,13 +146,13 @@
       "photos.copy": "Photo records from the Summer School will be made available here after the activities take place.",
       "photos.galleryLabel": "Event photo gallery",
       "photos.item1Title": "Opening",
-      "photos.item1Copy": "Institutional photos from the opening ceremony.",
       "photos.item2Title": "Seminars",
-      "photos.item2Copy": "Records of national and international scientific talks.",
       "photos.item3Title": "Short courses and workshops",
-      "photos.item3Copy": "Records of training activities, laboratories and practical sessions.",
       "photos.item4Title": "Posters and technical visit",
-      "photos.item4Copy": "Gallery dedicated to presentations, scientific interactions and applied activities.",
+      "photos.abertura.alt": "Opening ceremony - GEOMRIT 2027",
+      "photos.seminarios.alt": "Scientific seminar - GEOMRIT 2027",
+      "photos.minicursos.alt": "Short course activity - GEOMRIT 2027",
+      "photos.posteres.alt": "Poster session - GEOMRIT 2027",
       "photos.viewGallery": "View gallery",
       "photos.backToGallery": "Back",
       "photos.abertura.metaTitle": "Opening | GEOMRIT 2027 | Photos",
@@ -180,6 +184,7 @@
   const textElements = document.querySelectorAll("[data-i18n]");
   const ariaElements = document.querySelectorAll("[data-i18n-aria-label]");
   const hrefElements = document.querySelectorAll("[data-i18n-href]");
+  const altElements = document.querySelectorAll("[data-i18n-alt]");
   const languageButtons = document.querySelectorAll("[data-language]");
   const siteHeader = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
@@ -193,6 +198,7 @@
   const originalText = new Map();
   const originalAriaLabels = new Map();
   const originalHrefs = new Map();
+  const originalAlts = new Map();
   let currentLanguage = "pt";
 
   textElements.forEach(function (element) {
@@ -205,6 +211,10 @@
 
   hrefElements.forEach(function (element) {
     originalHrefs.set(element, element.getAttribute("href") || "");
+  });
+
+  altElements.forEach(function (element) {
+    originalAlts.set(element, element.getAttribute("alt") || "");
   });
 
   function getSavedLanguage() {
@@ -274,11 +284,10 @@
   }
 
   function getMenuLabel(isOpen) {
-    if (currentLanguage === "en") {
-      return isOpen ? translations.en["nav.closeMenu"] : translations.en["nav.openMenu"];
-    }
+    const key = isOpen ? "nav.closeMenu" : "nav.openMenu";
+    const dictionary = translations[currentLanguage] || {};
 
-    return isOpen ? "Fechar menu" : "Abrir menu";
+    return dictionary[key] || originalAriaLabels.get(menuToggle);
   }
 
   function setMenuOpen(isOpen) {
@@ -304,9 +313,16 @@
     }
   }
 
+  function translatedAlt(element) {
+    const key = element.getAttribute("data-i18n-alt");
+    const dictionary = translations[currentLanguage] || {};
+
+    return dictionary[key] || originalAlts.get(element) || "";
+  }
+
   function setLanguage(language) {
     const isEnglish = language === "en";
-    const dictionary = isEnglish ? translations.en : {};
+    const dictionary = translations[language] || {};
     currentLanguage = isEnglish ? "en" : "pt";
 
     document.documentElement.lang = isEnglish ? "en" : "pt-BR";
@@ -329,6 +345,10 @@
     hrefElements.forEach(function (element) {
       const key = element.getAttribute("data-i18n-href");
       element.setAttribute("href", dictionary[key] || originalHrefs.get(element));
+    });
+
+    altElements.forEach(function (element) {
+      element.setAttribute("alt", translatedAlt(element));
     });
 
     languageButtons.forEach(function (button) {
@@ -363,23 +383,32 @@
     });
   }
 
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
   document.querySelectorAll(".photo-card[data-thumbnails]").forEach(function (card) {
     const image = card.querySelector("img");
     const thumbnails = (card.getAttribute("data-thumbnails") || "")
       .split("|")
       .filter(Boolean);
-    let currentIndex = 0;
 
-    if (!image || thumbnails.length < 2) {
+    if (!image || thumbnails.length < 2 || reducedMotion.matches) {
       return;
     }
 
+    const galleryAlt = image.alt;
+    let currentIndex = 0;
+
     window.setInterval(function () {
+      if (document.visibilityState === "hidden") {
+        return;
+      }
+
       currentIndex = (currentIndex + 1) % thumbnails.length;
       image.classList.add("is-changing");
 
       window.setTimeout(function () {
         image.src = thumbnails[currentIndex];
+        image.alt = galleryAlt;
         image.classList.remove("is-changing");
       }, 180);
     }, 5000);

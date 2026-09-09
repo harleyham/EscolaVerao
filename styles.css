@@ -19,8 +19,13 @@
   box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 112px;
 }
 
@@ -184,8 +189,10 @@ h3 {
   transition: transform 180ms ease;
 }
 
-.nav-links a:hover::after {
-  transform: scaleX(1);
+@media (prefers-reduced-motion: no-preference) {
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+  }
 }
 
 .language-switch {
@@ -277,7 +284,8 @@ h3 {
 }
 
 .hero-logo,
-.hero-censipam-logo {
+.hero-censipam-logo,
+.hero-ufc-logo {
   display: block;
   flex: 0 0 auto;
   width: auto;
@@ -295,6 +303,11 @@ h3 {
 .hero-censipam-logo {
   height: var(--hero-logo-height);
   max-width: min(132px, 28vw);
+}
+
+.hero-ufc-logo {
+  height: var(--hero-logo-height);
+  max-width: min(180px, 34vw);
 }
 
 .hero-copy {
@@ -667,9 +680,11 @@ dd {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.photo-card:hover {
-  box-shadow: var(--shadow);
-  transform: translateY(-4px);
+@media (prefers-reduced-motion: no-preference) {
+  .photo-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-4px);
+  }
 }
 
 .photo-card:focus-visible {
@@ -694,8 +709,10 @@ dd {
   opacity: 0.35;
 }
 
-.photo-card:hover img {
-  transform: scale(1.05);
+@media (prefers-reduced-motion: no-preference) {
+  .photo-card:hover img {
+    transform: scale(1.05);
+  }
 }
 
 .photo-card div {
@@ -718,7 +735,7 @@ dd {
 }
 
 .gallery-page {
-  padding-top: 84px;
+  padding-top: 140px;
 }
 
 .gallery-page .section-title {
@@ -909,6 +926,15 @@ address a {
     align-items: center;
     padding: 7px clamp(12px, 3vw, 18px);
     box-shadow: 0 14px 34px rgba(12, 45, 32, 0.22);
+  }
+
+  main,
+  main section {
+    scroll-margin-top: 100px;
+  }
+
+  .gallery-page {
+    padding-top: 100px;
   }
 
   .image-brand {
