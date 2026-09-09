@@ -61,7 +61,7 @@ p {
 h1 {
   max-width: 980px;
   margin-bottom: 22px;
-  font-size: clamp(2.55rem, 6.6vw, 6.8rem);
+  font-size: clamp(1.28rem, 3.3vw, 3.4rem);
   line-height: 0.95;
   font-weight: 800;
 }
@@ -272,42 +272,6 @@ h3 {
   max-width: calc(100vw - 36px);
   padding: clamp(150px, 22vh, 220px) 0 92px;
   margin-left: clamp(18px, 7vw, 92px);
-}
-
-.hero-logos {
-  --hero-logo-height: clamp(84px, 10vw, 132px);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px 28px;
-  align-items: center;
-  margin-bottom: 28px;
-}
-
-.hero-logo,
-.hero-censipam-logo,
-.hero-ufc-logo {
-  display: block;
-  flex: 0 0 auto;
-  width: auto;
-  max-height: var(--hero-logo-height);
-  object-fit: contain;
-}
-
-.hero-logo {
-  height: var(--hero-logo-height);
-  max-width: min(460px, 82vw);
-  border-radius: 6px;
-  box-shadow: 0 22px 50px rgba(12, 45, 32, 0.32);
-}
-
-.hero-censipam-logo {
-  height: var(--hero-logo-height);
-  max-width: min(132px, 28vw);
-}
-
-.hero-ufc-logo {
-  height: var(--hero-logo-height);
-  max-width: min(180px, 34vw);
 }
 
 .hero-copy {
@@ -1034,14 +998,8 @@ address a {
     padding-bottom: 58px;
   }
 
-  .hero-logos {
-    --hero-logo-height: clamp(76px, 18vw, 104px);
-    gap: 14px 18px;
-    margin-bottom: 22px;
-  }
-
   h1 {
-    font-size: clamp(2rem, 11.5vw, 3.35rem);
+    font-size: clamp(1rem, 5.75vw, 1.675rem);
     line-height: 1.02;
   }
 

@@ -136,7 +136,7 @@
       "registration.title": "Registration and participation",
       "registration.copy": "The call for applications, registration form and definitive dates will be announced by the GEOMRIT 2027 coordination team. Selection will consider thematic alignment, academic or professional profile, and availability of places per activity.",
       "registration.button": "Express interest",
-      "registration.mailto": "mailto:contato@ligemredes.org?subject=GEOMRIT%202027%20-%20Registration",
+      "registration.mailto": "https://eventos.ham.eng.br/evento/3",
       "registration.item1": "Short courses with 25 to 30 participants.",
       "registration.item2": "Scientific seminars with 60 to 80 participants.",
       "registration.item3": "Activities in Portuguese and English.",
